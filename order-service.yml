@@ -7,5 +7,5 @@ spring:
     name: Order-SPM   #nombre del servicio a usar por el servidor EUREKA
   data:
     mongodb:
-      database: servicio-pedidos_db
+      database: order-service_db-SPM
       port: 27017
