@@ -1,5 +1,5 @@
 server:
- port: 8761 # Indica el puerto con el que inicia el servicio
+ port: 9027 # Indica el puerto con el que inicia el servicio
 
 eureka:
  client:
