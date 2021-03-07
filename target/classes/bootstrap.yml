@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: Order-SPM
+  cloud:
+    config:
+      uri: http://localhost:9026
+  profiles:
+    active: local
