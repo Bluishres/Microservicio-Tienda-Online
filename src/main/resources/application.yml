@@ -1,0 +1,25 @@
+server:
+  port: 9026
+
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Bluishres/Microservicio-Tienda-Online
+          force-pull: true
+          clone-on-start: true
+          username: Bluishres
+          password: 
+          default-label: develop
+
+          repos:
+            local:
+              uri: https://github.com/Bluishres/Microservicio-Tienda-Online
+              force-pull: true
+              clone-on-start: true
+              username: Bluishres
+              password: 
+              label: develop
