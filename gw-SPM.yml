@@ -1,7 +1,7 @@
 eureka:         #Manda al servidor EUREKA los detalles del servidor y su tiempo de actualizacion.
  client:
    serviceUrl:
-     defaultZone: ${EUREKA_URI:http://service-discovery:9027/eureka} # Registra el gateway en el servidor EUREKA.
+     defaultZone: ${EUREKA_URI:http://service-discovery:9026/eureka} # Registra el gateway en el servidor EUREKA.
 
 spring:
  cloud:
