@@ -1,10 +1,10 @@
 server:
-  port: 8095    #puerto del servicio
+  port: 9025    #puerto del servicio
 
 
 spring:
   application:
-    name: servicio-pedidos   #nombre del servicio a usar por el servidor EUREKA
+    name: Order-SPM   #nombre del servicio a usar por el servidor EUREKA
   data:
     mongodb:
       database: servicio-pedidos_db
