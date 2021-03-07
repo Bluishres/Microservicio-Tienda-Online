@@ -1,0 +1,9 @@
+server:
+ port: 8761 # Indica el puerto con el que inicia el servicio
+
+eureka:
+ client:
+   registerWithEureka: false   #Le dice al servidor EUREKA que no lo registre como servicio en el registro.
+   fetchRegistry: false
+ server:
+   waitTimeInMsWhenSyncEmpty: 0    #tiempo de espera para la sincronizacion
