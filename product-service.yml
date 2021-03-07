@@ -3,10 +3,10 @@ server:
 
 spring:
  application:
-   name: product-service   #Nombre del servicio actual para ser usado por EUREKA.
+   name: product-SPM   #Nombre del servicio actual para ser usado por EUREKA.
  main:
    allow-bean-definition-overriding: true
  data:
    mongodb:
-     database: product-service_db
+     database: product-service_db-SPM
      port: 27017
