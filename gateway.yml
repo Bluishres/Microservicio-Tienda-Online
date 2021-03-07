@@ -1,0 +1,34 @@
+eureka:         #Manda al servidor EUREKA los detalles del servidor y su tiempo de actualizacion.
+ client:
+   serviceUrl:
+     defaultZone: ${EUREKA_URI:http://service-discovery:8761/eureka} # Registra el gateway en el servidor EUREKA.
+
+spring:
+ cloud:
+   gateway:
+     globalcors:
+       corsConfigurations:
+         '[/**]':
+           allowedOrigins: "*"
+           allowedMethods:
+           - GET
+           - POST
+           - PUT
+           - PATCH
+           - DELETE
+           - OPTIONS
+     discovery:
+       locator: 
+         enabled: true #Activa el localizador para los servicios dentro del servidor EUREKA (Service Discovery)
+         lowerCaseServiceId: true #Recoge el nombre del servicio dentro de EUREKA en minusculas.
+
+     routes:
+       - id: order-service-id #Declaracion de la ruta del servicio de pedidos
+         uri: lb://order-service
+         predicates:
+           - Path=/api/v1/orders/** #Ruta para acceder al servicio
+
+       - id: product-service-id #Declaracion de la ruta del servicio de productos
+         uri: lb://product-service
+         predicates:
+           - Path=/api/v1/products/** #Ruta para acceder al servicio
